@@ -1,0 +1,105 @@
+#contact {
+  min-height: 50vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, #0a192f 60%, #233554 100%);
+}
+
+.contact-container {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0a192f 60%, #233554 100%);
+  padding: 40px 10px 60px 10px;
+  width: 100%;
+}
+
+.contact-container h2 {
+  color: var(--light-blue);
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(17, 34, 64, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px 24px 24px;
+  backdrop-filter: blur(2px);
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 7px;
+  border: 1.5px solid #233554;
+  background: #0a192f;
+  color: var(--text-light);
+  font-size: 1.08rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(100,255,218,0.04);
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1.5px solid var(--light-blue);
+  box-shadow: 0 0 0 2px #64ffda33;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  background: #0a192f;
+  border: 2px solid var(--light-blue);
+  color: var(--light-blue);
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(100,255,218,0.10);
+}
+
+button:hover {
+  background: var(--light-blue);
+  color: #0a192f;
+  border: 2px solid var(--light-blue);
+  box-shadow: 0 4px 16px rgba(100,255,218,0.18);
+  transform: scale(1.02);
+  transition: all 300ms;
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 18px 16px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form {
+    padding:18px 6px 14px 6px;
+    max-width: 80vw;
+  }
+}

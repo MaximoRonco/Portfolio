@@ -1,0 +1,133 @@
+.certificates-container{
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;  
+  align-items: center;
+}
+
+.certificates-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.certificate-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #112240;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(44,83,100,0.10);
+  border-bottom: 5px solid var(--light-blue);
+  padding: 18px 24px;
+  margin: 8px 0;
+  width: 420px;
+  max-width: 95vw;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 8px 32px rgba(44,83,100,0.16);
+  transform: translateY(-4px) scale(1.01);
+  cursor: pointer;
+}
+
+.certificate-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 22px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(100,255,218,0.08);
+}
+
+.certificate-info {
+  flex: 1;
+  text-align: left;
+}
+
+.certificate-title {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--light-blue);
+  margin: 0 0 4px 0;
+}
+
+.certificate-issuer {
+  color: #4b647c;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+.certificate-date {
+  color: #7b8fa6;
+  font-size: 0.98em;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .certificate-card {
+    width: 90vw;
+    max-width: 400px;
+    padding: 14px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates-grid {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .certificate-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90vw;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 18px 10px 16px 10px;
+    text-align: center;
+  }
+  .certificate-image {
+    margin: 0 0 14px 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .certificate-info {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.certificate-card {
+  /* ...tus estilos previos... */
+  opacity: 0;
+  transform: translateX(60px) scale(0.97);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.certificate-card.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  animation: fadeInRight 0.7s cubic-bezier(.23,1.01,.32,1) both;
+}
