@@ -1,3 +1,28 @@
+.about-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+  .about-btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .about-btns .cv-btn {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* Botones alineados */
+.about-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
 .about-container {
   margin-top: 100px;
   display: flex;
@@ -9,7 +34,9 @@
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 1s ease forwards;
+ 
 }
+
 
 .about-img {
   width: 250px;
@@ -20,7 +47,12 @@
   object-position: center;
 }
 .about-text {
-  max-width: 500px;
+  max-width: 650px;
+  padding: 0 10px;
+}
+
+.about-btns {
+  max-width: 650px;
 }
 
 .cv-btn {
@@ -39,6 +71,8 @@
   color: var(--dark-blue);
   transform: translateY(-2px);
 }
+
+
 
 /* Animación */
 @keyframes fadeInUp {

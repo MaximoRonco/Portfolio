@@ -1,37 +1,60 @@
 import React, { useRef, useEffect } from "react";
+import "../assets/coderhouse_logo.jpeg"
+import "../assets/udemy-logo.png"
+import "../assets/codearock-log.jpg"
 import "./Certificates.css";
 
 const Certificates = [
     {
-        title: "Certificado en Desarrollo Web",
+        title: "Introducción a la Seguridad Informática",
+        issuer: "EducaciónIT",
+        date: "Marzo 2020",
+        image: require("../assets/educacionit.jpg"),
+        fullImage: require("../assets/Certificado-Introducción-a-la-Seguridad-Informática-EducaciónIT.png")
+    },
+    {
+        title: "Master en CSS",
         issuer: "Udemy",
-        date: "Enero 2023",
-        image: require("../assets/perfil.jpg")
+        date: "Octubre 2020",
+        image: require("../assets/udemy-logo.png"),
+        fullImage: require("../assets/css.png")
     },
     {
-        title: "UX/UI",
-        issuer: "Coderhouse",
-        date: "Noviembre 2024",
-        image: require("../assets/perfil.jpg")
+        title: "JavaScript",
+        issuer: "Udemy",
+        date: "Septiembre 2020",
+        image: require("../assets/udemy-logo.png"),
+        fullImage: require("../assets/certificado-js.jpg")
     },
     {
-        title: "UX/UI",
-        issuer: "Coderhouse",
-        date: "Noviembre 2024",
-        image: require("../assets/perfil.jpg")
+        title: "Bootcamp de desarrollo web",
+        issuer: "Codearock",
+        date: "Noviembre 2023",
+        image: require("../assets/codearock-log.jpg"),
+        fullImage: require("../assets/bootcamp.jpg")
     },
     {
-        title: "UX/UI",
-        issuer: "Coderhouse",
-        date: "Noviembre 2024",
-        image: require("../assets/perfil.jpg")
+        title: "Software Testing",
+        issuer: "Udemy",
+        date: "Enero 2024",
+        image: require("../assets/udemy-logo.png"),
+        fullImage: require("../assets/tester.jpg")
     },
     {
-        title: "UX/UI",
+        title: "Diseño UX/UI",
         issuer: "Coderhouse",
-        date: "Noviembre 2024",
-        image: require("../assets/perfil.jpg")
+        date: "Junio 2024",
+        image: require("../assets/coderhouse_logo.jpeg"),
+        fullImage: require("../assets/certificadoUXUI.png")
     },
+    {
+        title: "SEO y Posicionamiento web",
+        issuer: "Udemy",
+        date: "Noviembre 2024",
+        image: require("../assets/udemy-logo.png"),
+        fullImage: require("../assets/notfound.png")
+    },
+
     
 ]
 
@@ -64,17 +87,18 @@ export default function Certificate() {
       <div className="certificates-grid">
         {Certificates.map((cert, index) => (
           <div
-            className="certificate-card"
-            key={index}
-            ref={el => (cardRefs.current[index] = el)}
-          >
-            <img src={cert.image} alt={cert.title} className="certificate-image" />
-            <div className="certificate-info">
-              <h3 className="certificate-title">{cert.title}</h3>
-              <p className="certificate-issuer">{cert.issuer}</p>
-              <p className="certificate-date">{cert.date}</p>
+              className="certificate-card"
+              key={index}
+              ref={el => (cardRefs.current[index] = el)}
+              onClick={() => window.open(cert.fullImage, "_blank")}
+            >
+              <img src={cert.image} alt={cert.title} className="certificate-image" />
+              <div className="certificate-info">
+                <h3 className="certificate-title">{cert.title}</h3>
+                <p className="certificate-issuer">{cert.issuer}</p>
+                <p className="certificate-date">{cert.date}</p>
+              </div>
             </div>
-          </div>
         ))}
       </div>
     </div>

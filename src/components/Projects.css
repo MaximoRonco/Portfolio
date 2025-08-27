@@ -4,14 +4,15 @@
   align-items: center;  
 }
 
-.projects-grid{
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px; /* Puedes ajustar este valor si quieres más ancho */
   padding: 20px;
   gap: 18px;
 }
+
 
 .project-card {
   background: #112240;
@@ -19,27 +20,28 @@
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.5s;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  /* Animación de entrada solo con la clase visible */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) !important;
   cursor: pointer;
 }
 
 .project-img {
   width: 100%;
-  height: 150px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
 }
 
 .tech-list {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -77,15 +79,24 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 700px) {
   .projects-grid {
     grid-template-columns: 1fr;
     padding: 5px;
-    gap: 12px;
+    gap: 35px;
   }
   .project-card {
     width: 85%;
     padding: 14px;
+  }
+  .project-img {
+    height: 180px;
   }
 }
 
@@ -100,11 +111,13 @@
   }
 }
 
+
 .project-card {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.5s, transform 0.5s;
 }
+
 
 .project-card.visible {
   opacity: 1;
