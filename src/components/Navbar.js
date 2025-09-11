@@ -3,7 +3,6 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <nav className="navbar">
       <h2 className="logo">Máximo Ronco</h2>

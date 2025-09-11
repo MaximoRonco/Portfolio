@@ -51,6 +51,22 @@
   padding: 0 10px;
 }
 
+.about-text a {
+  color: var(--text-light);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.about-text a:hover {
+  color: var(--light-blue);
+  text-decoration: underline;
+}
+
+.about-text a:visited {
+  color: var(--text-light);
+}
+
 .about-btns {
   max-width: 650px;
 }

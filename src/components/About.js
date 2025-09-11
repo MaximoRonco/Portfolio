@@ -9,7 +9,9 @@ export default function About() {
       <div className="about-text">
         <h2>Sobre mí</h2>
         <p>
-          Hola, soy <strong>Máximo Ronco</strong>, de Córdoba, Argentina. Estudio <strong>Ingeniería en Sistemas</strong> y me estoy formando como <strong>desarrollador web</strong>. Me apasiona aprender nuevas formas de combinar diseño y funcionalidad para crear páginas que sean claras, útiles y atractivas.
+          Hola, soy <strong>Máximo Ronco</strong>, de Córdoba, Argentina. Estudio <strong>Ingeniería en Sistemas</strong> y me estoy formando como <strong>Desarrollador Web</strong> y <strong>Tester QA Automation</strong>. Me encanta combinar el diseño y la funcionalidad para crear páginas que sean claras, útiles y atractivas.
+          Además, disfruto mucho de <strong>aprender nuevas tecnologías</strong> y mantenerme en <strong>constante crecimiento</strong>, siempre buscando formas de mejorar lo que hago y de aportar soluciones innovadoras.
+          Actualmente, junto a unos compañeros, desarrollamos <strong><a href="https://www.instagram.com/codeandoweb/" target="_blank" rel="noopener noreferrer">Codeando Web</a></strong>, un proyecto personal en el que brindamos <strong>soluciones web</strong> a personas y emprendimientos,
         </p>
         <div className="about-btns">
           <a href="/CV_MaximoRonco.pdf" download>

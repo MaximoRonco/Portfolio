@@ -66,6 +66,7 @@ function useRevealOnScroll() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Deja de observar una vez visible
           }
         });
       },

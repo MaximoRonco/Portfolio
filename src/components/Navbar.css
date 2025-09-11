@@ -30,6 +30,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: 100px;
+  box-shadow: none !important;
 }
 
 .menu-btn svg{
@@ -80,6 +81,7 @@
   top: 18px;
   right: 18px;
   cursor: pointer;
+  box-shadow: none !important;
 }
 .side-menu-backdrop {
   position: fixed;
