@@ -47,6 +47,20 @@ const proyectos = [
       { nombre: "Sequelize", logo: require("../assets/sequelize.png") }
     ],
     link:"https://mcl-automotores.vercel.app/"
+  },
+    {
+    titulo: "Alvarez Construccion en Seco",
+    descripcion: "Web corporativa para empresa constructora con portafolio de proyectos, galería interactiva y panel administrativo completo para gestionar carrusel, categorías y proyectos realizados.",
+    imagen: require("../assets/alvarez2.png"),
+    tecnologias: [
+      { nombre: "React", logo: require("../assets/react-logo.png") },
+      { nombre: "HTML 5", logo: require("../assets/HTML5_logo.png") },
+      { nombre: "CSS", logo: require("../assets/css-logo.png") },
+      { nombre: "NodeJs", logo: require("../assets/node.png") },
+      { nombre: "MySQL", logo: require("../assets/mysql.png") },
+      { nombre: "Sequelize", logo: require("../assets/sequelize.png") }
+    ],
+    link:"https://alvarezconstruccionenseco.vercel.app/"
   }
 
 ];
@@ -59,6 +73,7 @@ function useRevealOnScroll() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
+            observer.unobserve(entry.target); 
           }
         });
       },

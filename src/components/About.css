@@ -51,20 +51,43 @@
   padding: 0 10px;
 }
 
-.about-text a {
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--light-blue);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: var(--text-light);
+  text-align: justify;
+  font-weight: 400;
+}
+
+.about-text strong {
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
+.about-text a {
+  color: var(--light-blue);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s;
+  font-weight: 600;
 }
 
 .about-text a:hover {
   color: var(--light-blue);
   text-decoration: underline;
+  filter: brightness(1.2);
 }
 
 .about-text a:visited {
-  color: var(--text-light);
+  color: var(--light-blue);
 }
 
 .about-btns {
